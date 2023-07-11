@@ -1,0 +1,32 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "webpack serve",
+    "dev": "webpack --watch",
+    "build": "NODE_ENV=production webpack && zip -r dist.zip dist/* ",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext ts,tsx,js",
+    "test-all": "yarn lint && yarn type-check"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webextension-polyfill-ts": "^0.26.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "copy-webpack-plugin": "^11.0.0",
+    "fork-ts-checker-webpack-plugin": "^8.0.0",
+    "html-webpack-plugin": "^5.5.3",
+    "prettier": "^3.0.0",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "packageManager": "yarn@3.6.1"
+}

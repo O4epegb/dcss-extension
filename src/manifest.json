@@ -1,0 +1,27 @@
+{
+  "name": "DCSS Webtiles Extension",
+  "description": "Lets you see player stats in Webtiles main screen",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["storage"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' http://localhost:*; object-src 'self'"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": [
+        "https://crawl.xtahua.com/",
+        "https://crawl.kelbi.org/*",
+        "https://underhound.eu:8080/*",
+        "http://crawl.akrasiac.org:8080/*"
+      ]
+    }
+  ]
+}
