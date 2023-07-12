@@ -38,13 +38,14 @@ function main() {
 
             ;[...el.querySelectorAll('td.username')].map((td) => {
               const tr = td.parentElement
-              let infoTd = tr.querySelector('.dcss-ext-info')
+              let infoTd = tr.querySelector<HTMLTableCellElement>('.dcss-ext-info')
               let contentSpan = tr.querySelector('.dcss-ext-info span')
               const name = td.querySelector('a').textContent
 
               if (!infoTd) {
                 infoTd = document.createElement('td')
                 infoTd.classList.add('dcss-ext-info')
+                infoTd.style.whiteSpace = 'nowrap'
                 insertAfter(infoTd, tr.querySelector('td'))
 
                 contentSpan = document.createElement('span')

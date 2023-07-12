@@ -9,10 +9,10 @@ function App() {
         width: '300px',
       }}
     >
-      DCSS Webtiles Extension
+      DCSS Stats Webtiles Extension
       <hr />
       <div>
-        <button onClick={() => browser.storage.sync.clear()}>Clear browser cache</button>
+        <button onClick={() => browser.storage.local.clear()}>Clear extension cache</button>
       </div>
     </main>
   )

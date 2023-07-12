@@ -22,7 +22,7 @@ browser.runtime.onMessage.addListener(async (msg) => {
   const playerName = msg.name
   const cacheKey = getPlayerKey(playerName)
 
-  const cache = (await browser.storage.sync.get(cacheKey))[cacheKey]
+  const cache = (await browser.storage.local.get(cacheKey))[cacheKey]
 
   if (cache && isValidCache(cache)) {
     return cache
@@ -60,7 +60,7 @@ browser.runtime.onMessage.addListener(async (msg) => {
       return res.json()
     })
     .then(async (res: ApiResponse) => {
-      await browser.storage.sync.set({
+      await browser.storage.local.set({
         [cacheKey]: {
           ...res,
           date: Date.now(),

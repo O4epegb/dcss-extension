@@ -1,6 +1,6 @@
 {
-  "name": "DCSS Webtiles Extension",
-  "description": "Lets you see player stats in Webtiles main screen",
+  "name": "Dungeon Crawl Stone Soup Webtiles Extension",
+  "description": "Shows player stats in DCSS Webtiles main screen",
   "version": "1.0",
   "manifest_version": 3,
   "permissions": ["storage"],
@@ -17,10 +17,14 @@
     {
       "js": ["content.js"],
       "matches": [
-        "https://crawl.xtahua.com/",
+        "https://crawl.xtahua.com/*",
         "https://crawl.kelbi.org/*",
         "https://underhound.eu:8080/*",
-        "http://crawl.akrasiac.org:8080/*"
+        "http://crawl.akrasiac.org:8080/*",
+        "http://lazy-life.ddo.jp:8080/*",
+        "http://webzook.net:8080/*",
+        "https://crawl.project357.org/*",
+        "https://cbro.berotato.org:8443/*"
       ]
     }
   ]
