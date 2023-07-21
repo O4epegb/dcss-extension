@@ -1,7 +1,7 @@
 {
   "name": "Dungeon Crawl Stone Soup Webtiles Extension",
   "description": "Shows player stats in DCSS Webtiles main screen",
-  "version": "1.0",
+  "version": "2.0",
   "manifest_version": 3,
   "permissions": ["storage"],
   "content_security_policy": {
